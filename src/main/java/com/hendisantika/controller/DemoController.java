@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
 /**
  * Created by IntelliJ IDEA.
  * Project : spring-boot-oauth2-social-login
@@ -21,6 +23,6 @@ public class DemoController {
 
     @GetMapping
     public ResponseEntity<String> sayHello() {
-        return ResponseEntity.ok("Hell OAuth2");
+        return ResponseEntity.ok("Hell OAuth2! " + LocalDateTime.now());
     }
 }
